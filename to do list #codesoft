@@ -1,0 +1,36 @@
+task=[]
+def add_task(task):
+    task.append(task)
+    print(f"added task:{task}")
+def remove_task(task):
+    if task in tasks:
+        tasks.remove(task)
+        print(f"remove task:{task}")
+    else:
+        print(f"{task} not found")
+def view_task():
+    print("to do list:")
+    for i,task in enumerate(tasks):
+        print(f"{i+1}.{task}")
+while True:
+    print("\n what you want to do")
+    print("1.ADD a task")
+    print("2.Remove a task")
+    print("3.view all task")
+    print("exit")
+    choice=input("enter choice")
+    if choice=="1":
+        task=input("enter a new task")
+        add_task(task)
+    elif choice=="2":
+        task=input("enter a new task")
+        remove_task(task)
+    elif choice=="3":
+        view_task()
+    elif choice=="4":
+        print("exiting")
+        break
+    else:
+        print("invalid choice")
+        
+
