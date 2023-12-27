@@ -1,0 +1,4 @@
+from currency_converter import currencyconverter
+amount=int(input("amount:"))
+converting=currencyconverter().convert(amount,"USD","EUR")
+print(converting)
