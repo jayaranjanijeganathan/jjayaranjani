@@ -1,0 +1,11 @@
+import smtplip
+email=input("sender email:")
+receiver_email=input("receiver mail:")
+subject=input("subject:")
+message=input("mesage:")
+text=f"subject:{subject}\n\n{message}"
+server=smtplip.SMTP("smt.gmail.com",587)
+server.starttls()
+server.login(email,"fsgjdhsbdghcbugudsywqv")
+server.sendmail(email,receiver_email,text)
+print("email has been sent to" + receiver_email)
